@@ -1,0 +1,6 @@
+framework module Pods_Alertizen {
+  umbrella header "Pods-Alertizen-umbrella.h"
+
+  export *
+  module * { export * }
+}
