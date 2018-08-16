@@ -86,8 +86,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UARegistrationDelegate,CLL
          self.pushNotificationUrban() 
         
         // Testing Mode
-        
-      //  channelId =  "5c7464c3-f9d6-4449-991dgsdgdsg666-555"
+      //  channelId =  "5c7464c3-f9d6-4449-991dgsdgdsg666-777"
         
         let dic = ["key":"1"]
         
@@ -107,7 +106,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UARegistrationDelegate,CLL
         
         // Testing Mode
         
-       //let uid = "4A21542B-101C-4BA8-8AD8-B3DBE86B9555"
+       //let uid = "4A21542B-101C-4BA8-8AD8-B3DBE86B9777"
         
        let uid = UIDevice.current.identifierForVendor!.uuidString
         
