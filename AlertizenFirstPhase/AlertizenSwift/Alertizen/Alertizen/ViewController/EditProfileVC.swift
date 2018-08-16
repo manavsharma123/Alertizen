@@ -106,6 +106,7 @@ class EditProfileVC: UIViewController,UITableViewDataSource,UITableViewDelegate,
         let header = UIView(frame: CGRect(x: 10, y: 0, width: self.view.frame.size.width - 20, height: 30))
         
         let title = UILabel(frame: CGRect(x: 15, y:0, width: self.view.frame.size.width-30, height: 30))
+        
         header.backgroundColor = UIColor.init(colorLiteralRed: 231/255.0, green: 77/255.0, blue: 61/255.0, alpha: 1)
         
         title.textColor = UIColor.lightGray
@@ -327,11 +328,15 @@ class EditProfileVC: UIViewController,UITableViewDataSource,UITableViewDelegate,
                 //Ok Button
                 let okAction = UIAlertAction(title: "YES", style: UIAlertActionStyle.default)
                 { (result : UIAlertAction) -> Void in
-                    
-                    UserDefaults.standard.set(nil, forKey: "campusSelect")
-                    let obj = self.storyboard?.instantiateViewController(withIdentifier: "signIn") as! UserSignInVC
+                    //Abhi
+                //UserDefaults.standard.set(nil, forKey: "campusSelect")
+                    let obj = self.storyboard?.instantiateViewController(withIdentifier: "AutoLogin") as! AutoLoginVc
                    
-                    obj.ComingFromLogout = true
+                    obj.strFullName = self.fullNameStr
+                    
+                    obj.strEmail = emailKey
+                    
+//                    obj.ComingFromLogout = true
                     self.navigationController?.pushViewController(obj, animated: false)
 
                 }

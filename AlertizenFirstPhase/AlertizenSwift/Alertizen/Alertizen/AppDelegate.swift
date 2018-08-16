@@ -82,11 +82,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UARegistrationDelegate,CLL
             self.window?.rootViewController = navigationController
             self.window?.makeKeyAndVisible()
         }
-        
-         self.pushNotificationUrban() 
+        //Abhi
+         self.pushNotificationUrban()
         
         // Testing Mode
-      //  channelId =  "5c7464c3-f9d6-4449-991dgsdgdsg666-777"
+       // channelId =  "5c7464c3-f9d6-4449-991dgsdgdsg666-232"
         
         let dic = ["key":"1"]
         
@@ -105,10 +105,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UARegistrationDelegate,CLL
         UserDefaults.standard.set("0", forKey: "codeentered")
         
         // Testing Mode
+      // let uid = "4A21542B-101C-4BA8-8AD8-B3DBE86B9236"
         
-       //let uid = "4A21542B-101C-4BA8-8AD8-B3DBE86B9777"
-        
-       let uid = UIDevice.current.identifierForVendor!.uuidString
+     let uid = UIDevice.current.identifierForVendor!.uuidString
         
         UserDefaults.standard.setValue(uid, forKey: "UID")
         

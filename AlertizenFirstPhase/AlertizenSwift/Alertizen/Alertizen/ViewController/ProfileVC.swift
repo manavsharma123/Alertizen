@@ -35,20 +35,29 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewWillAppear(_ animated: Bool)
     {
+//        let nsData = UserDefaults.standard.value(forKey: "img_Data")
+//
+//        if nsData != nil {
+//        //let data = try? Data(contentsOf: nsData as! URL)
+//
+//        profileImage?.image = UIImage(data: nsData! as! Data)
+//        }
         let detail : NSDictionary = UserDefaults.standard.value(forKey:"getUserDetails") as! NSDictionary
         
-        let detail_Dict = ((detail["userDetails"] as! NSDictionary)["userId"] as! String)
+        print(detail)
         
+        let detail_Dict = ((detail["userDetails"] as! NSDictionary)["userId"] as! String)
+
         fname = ((detail["userDetails"] as! NSDictionary)["fname"] as! String)
 
         lname = ((detail["userDetails"] as! NSDictionary)["lname"] as! String)
-        
+
         phone = ((detail["userDetails"] as! NSDictionary)["phone"] as! String)
 
         OperationQueue.main.addOperation
             {
                 SDImageCache.shared().clearMemory()
-               
+
                 SDImageCache.shared().clearDisk()
 
                 if (UserDefaults.standard.bool(forKey: "Facebook") == true)
@@ -71,27 +80,27 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     self.profileImage?.sd_setImage(with: URL(string: PhotoUrl), placeholderImage:
                         UIImage(named: "profileDefaultImage"))
                 }
-                
+
                 self.profileImage?.layer.cornerRadius = (self.profileImage?.frame.size.height)!/2
-                
+
                 self.profileImage?.layer.masksToBounds = true
-                
+
                 self.profileImage?.layer.borderWidth = 2
-                
+
                 self.profileImage?.layer.borderColor = UIColor.white.cgColor
-                
+
                 if (UserDefaults.standard.bool(forKey: "Facebook") == true)
                 {
                     let firstChar = String(fname.characters.first!)
-                    
+
                     if !phone.isEmpty {
-                        
+
                         let phoneLast4Char =  phone.substring(from:phone.index(phone.endIndex, offsetBy: -4))
-                        
+
                         self.userNmTxtFld.text = String(format:"%@%@%@",firstChar,lname,phoneLast4Char)
                     }
                     else {
-                        
+
                         self.userNmTxtFld.text = String(format:"%@%@",firstChar,lname)
                     }
                 }
@@ -172,6 +181,7 @@ class ProfileVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         else
         {
             let vc = SettingsViewController(nibName: "SettingsViewController", bundle: nil)
+            
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

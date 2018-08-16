@@ -141,6 +141,7 @@ class CreateProfileVC: UIViewController,UITextFieldDelegate, UIImagePickerContro
         
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         profileImage?.image = image
+        
         picker.dismiss(animated: true, completion: nil)
         //btnphoto
     }
@@ -305,7 +306,10 @@ class CreateProfileVC: UIViewController,UITextFieldDelegate, UIImagePickerContro
             let udid = UserDefaults.standard.value(forKey: "UID")
             self.view.isUserInteractionEnabled = false
             let scaledImage: UIImage? = self.scaledImage((profileImage?.image)!)
+            
             let imageData: NSData? = UIImagePNGRepresentation(scaledImage!) as NSData?
+            
+         //   UserDefaults.standard.set(imageData, forKey: "img_Data")
            
             if channelId == nil {
                 
@@ -315,8 +319,7 @@ class CreateProfileVC: UIViewController,UITextFieldDelegate, UIImagePickerContro
             let dictUserInfo = ["phone":txtPhoneNumber.text!,"first_name":txtFirstName.text!,"last_name":txtLastName.text!,"email":txtEmailAddress.text!,"password":txtPassword.text!,"filename":"photo.jpg","UU_ID":udid as? String,"binary_file":imageData!.base64EncodedString(options: .lineLength64Characters),"secure_token":"CMPS-Si00MNup3","and_channel_id":channelId] as! [String : String]
             
             print(dictUserInfo)
-          
-            WebService.sharedInstance.postMethodWithParams(strURL: "signup.php", dict: dictUserInfo as NSDictionary, completionHandler:
+           WebService.sharedInstance.postMethodWithParams(strURL: "signup.php", dict: dictUserInfo as NSDictionary, completionHandler:
                 { (dictReponse) in
                    
                     print(dictReponse)
@@ -369,11 +372,13 @@ class CreateProfileVC: UIViewController,UITextFieldDelegate, UIImagePickerContro
                     }
             }, failure:{ (errorMsg) in
                 
+                DispatchQueue.main.async {
+                
                 self.view.isUserInteractionEnabled = true
                
                 hud.removeFromSuperview()
                 
-                UIAlertController.Alert(title: "API Error", msg: "There seems to be a problem in fetching the data at the moment. Please try again.", vc: self)
+                    UIAlertController.Alert(title: "API Error", msg: "There seems to be a problem in fetching the data at the moment. Please try again.", vc: self)                 }
             })
         
          }

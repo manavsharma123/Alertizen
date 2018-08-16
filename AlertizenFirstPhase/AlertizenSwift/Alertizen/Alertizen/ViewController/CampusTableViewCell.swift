@@ -6,6 +6,7 @@
 //  Copyright © 2017 Mind Roots Technologies. All rights reserved.
 //
 
+
 import UIKit
 
 class CampusTableViewCell: UITableViewCell {

@@ -35,6 +35,7 @@ class CampusSelectionVC: UIViewController,UITableViewDelegate,UITableViewDataSou
             
             self.arrDeleteMsg = historyWords
             
+            //Abhi
             self.updateTagsOnUrbanAirship()
         }
          getCampusDetail()
@@ -260,13 +261,11 @@ class CampusSelectionVC: UIViewController,UITableViewDelegate,UITableViewDataSou
     }
     @IBAction func btnProfilePressed(_ sender: UIButton)
     {
-        
-       
         if let historyWords =  UserDefaults.standard.value(forKey: "campusSelect")as? [String]
         {
             print(historyWords)
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "ProfileVC")
-            self.navigationController?.pushViewController(vc!, animated: true)
+            self.navigationController?.pushViewController(vc!, animated: false)
             
         }
         else

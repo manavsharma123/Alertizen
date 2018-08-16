@@ -44,8 +44,7 @@ class AuthenticationVC: UIViewController,UIScrollViewDelegate,UITextFieldDelegat
         lblHeading.attributedText = NSAttributedString(string: "With alertizen members are notified of a possible crime occurring in their neighborhood within minutes of the 911 call. We'll immediately send you a push notification to your phone with the address and type of crime reported.", attributes:attributes)
         
         lblEnterPhn.attributedText = NSAttributedString(string: "Enter your phone number to create a secure account and become a member of Alertizen.", attributes: attributes)
-        
-    }
+     }
 
     override func didReceiveMemoryWarning()
     {

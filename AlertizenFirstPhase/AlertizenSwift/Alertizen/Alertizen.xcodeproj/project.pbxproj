@@ -92,6 +92,7 @@
 		5E92992A1E7935C50064A365 /* userVerificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9299261E7935C50064A365 /* userVerificationViewController.xib */; };
 		5E94631D1E38B2900037224E /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E94631C1E38B2900037224E /* LoaderView.swift */; };
 		6721E9B6A017502A44D019CA /* Pods_Alertizen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8711CBECE8BB63DCED7179D9 /* Pods_Alertizen.framework */; };
+		AE3852CC2125850900F69F5F /* AutoLoginVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3852CB2125850900F69F5F /* AutoLoginVc.swift */; };
 		AE902CF01DFE73F800A918D4 /* AirshipKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE902CDB1DFE73A800A918D4 /* AirshipKit.framework */; };
 		AE902CF11DFE73F800A918D4 /* AirshipKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AE902CDB1DFE73A800A918D4 /* AirshipKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B3023EFB1DF9421600FD6402 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3023EFA1DF9421600FD6402 /* MapKit.framework */; };
@@ -307,6 +308,7 @@
 		5E9299261E7935C50064A365 /* userVerificationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = userVerificationViewController.xib; sourceTree = "<group>"; };
 		5E94631C1E38B2900037224E /* LoaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		8711CBECE8BB63DCED7179D9 /* Pods_Alertizen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Alertizen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE3852CB2125850900F69F5F /* AutoLoginVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLoginVc.swift; sourceTree = "<group>"; };
 		AE902CD31DFE73A700A918D4 /* AirshipKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AirshipKit.xcodeproj; path = AirshipKit/AirshipKit.xcodeproj; sourceTree = "<group>"; };
 		B3023EFA1DF9421600FD6402 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B31D4D6A1E331F0D00529DFC /* AreaMonitoringVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaMonitoringVC.swift; sourceTree = "<group>"; };
@@ -681,6 +683,7 @@
 				0CC3D0EE1ED41BD30052AA81 /* ReportActivityViewController.xib */,
 				0CD0E8A71EFB898A004A1C22 /* locationViewController.swift */,
 				0CD0E8A81EFB898A004A1C22 /* locationViewController.xib */,
+				AE3852CB2125850900F69F5F /* AutoLoginVc.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1046,6 +1049,7 @@
 				B3D00D2B1DDEF1D100488B03 /* CampusSelectionVC.swift in Sources */,
 				B3BE56BC1E4B35FA008AF9A1 /* SDWebImagePrefetcher.m in Sources */,
 				34C7562D1DED741300FD25E3 /* OTExtensionString.swift in Sources */,
+				AE3852CC2125850900F69F5F /* AutoLoginVc.swift in Sources */,
 				B3BE56B51E4B35FA008AF9A1 /* NSData+ImageContentType.m in Sources */,
 				187775AA205FDA220079DF58 /* NewPasswordVC.swift in Sources */,
 				B34147B51E4B3A71007BEF1A /* SVProgressAnimatedView.m in Sources */,

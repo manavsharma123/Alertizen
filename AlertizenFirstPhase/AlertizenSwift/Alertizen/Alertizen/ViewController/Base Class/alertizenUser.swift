@@ -57,7 +57,9 @@ class alertizenUser: NSObject
         else
         {
             dnd = "0"
+            
             UserDefaults.standard.set("12:00 AM", forKey:"From")
+            
             UserDefaults.standard.set("12:00 PM", forKey:"To")
         }
     
